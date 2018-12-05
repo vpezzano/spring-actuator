@@ -40,7 +40,7 @@
 			<scope>runtime</scope>
 		</dependency>
 		<!-- Marked the embedded servlet container as provided; in this -->
-		<!-- case we generate a jar, so we don't need the embedded Tomcat. -->
+		<!-- case we generate a war, so we don't need the embedded Tomcat. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
