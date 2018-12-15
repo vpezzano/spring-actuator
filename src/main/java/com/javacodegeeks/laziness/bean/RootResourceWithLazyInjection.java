@@ -1,5 +1,6 @@
 package com.javacodegeeks.laziness.bean;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
@@ -17,10 +18,15 @@ public class RootResourceWithLazyInjection {
 	 */
 	@Lazy
 	public RootResourceWithLazyInjection(LazyResourceDependency resourceDependency) {
-		System.out.println("Injected " + resourceDependency + " in RootResourceWithLazyInjection.");
+		System.out.println("Constructor of " + this + " invoked.");
 		this.resourceDependency = resourceDependency;
 	}
 
+	/*
+	 * If we comment out the @Bean annotation, no instance of LazyResourceDependency
+	 * will be created, because it's marked @Lazy.
+	 */
+	@Bean
 	public void useDependency() {
 		System.out.println("Using " + this.resourceDependency + ".");
 	}

@@ -13,7 +13,7 @@ public class LazyRootResource {
 	private ResourceDependency resourceDependency;
 
 	public LazyRootResource(ResourceDependency resourceDependency) {
-		System.out.println("Injected " + resourceDependency + " in LazyRootResource.");
+		System.out.println("Constructor of " + this + " invoked.");
 		this.resourceDependency = resourceDependency;
 	}
 	
